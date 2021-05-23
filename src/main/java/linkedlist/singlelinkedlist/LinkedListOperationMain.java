@@ -1,7 +1,5 @@
 package linkedlist.singlelinkedlist;
 
-import main.java.linkedlist.Node;
-
 public class LinkedListOperationMain {
 
     public static void main(String[] args) {
