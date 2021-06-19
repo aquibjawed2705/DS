@@ -49,7 +49,7 @@ public class LeftMostRepeatingChar {
     }
 
     public static void main(String[] args) {
-        System.out.println(findIndexofLeftMostRepeatingM1("abaccccbbbb"));
+        System.out.println(findIndexofLeftMostRepeatingM1("accccbbbb"));
         System.out.println(findIndexofLeftMostRepeatingM2("abaccccbbbb"));
         System.out.println(findIndexofLeftMostRepeatingM3("abc"));
     }

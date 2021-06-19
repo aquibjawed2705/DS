@@ -19,7 +19,7 @@ public class StockBuyAndSell {
     }
 
     public static void main(String[] args) {
-        int ar[] = new int[]{1, 2, 4, 3,10,8,6,5,2};
+        int ar[] = new int[]{8, 2, 4, 3,10,8,6,5,2};
         System.out.println(profitInStock(ar));
     }
 }

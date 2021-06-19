@@ -12,7 +12,13 @@ public class Tree {
         root.left.left = new Node(40);
         root.left.right = new Node(45);
         root.right.right = new Node(50);
-        System.out.println("DFS-----Start");
+        System.out.println("In-order..");
+        inorderTraversal(root);
+        System.out.println();
+        System.out.println( findPredessor(40,root));
+        System.out.println(prev);
+       // System.out.println("Predeccesor"+prev);
+        /*System.out.println("DFS-----Start");
         System.out.println("In-Order Traversal");
         inorderTraversal(root);
         System.out.println("\nPre-Order Traversal");
@@ -33,7 +39,7 @@ public class Tree {
         System.out.println("\nLevel Order Traversal using queue in line M2");
         levelOrderTraversalUsingQueueInLineM2(root);
         System.out.println("BFS-----End");
-        System.out.println("Size of binary tree:" + getSizeOfBinaryTree(root));
+        System.out.println("Size of binary tree:" + getSizeOfBinaryTree(root));*/
 
     }
 
@@ -48,15 +54,15 @@ public class Tree {
     static void preorderTraversal(Node root) {
         if (root != null) {
             System.out.print(root.key + " ");
-            inorderTraversal(root.left);
-            inorderTraversal(root.right);
+            preorderTraversal(root.left);
+            preorderTraversal(root.right);
         }
     }
 
     static void postorderTraversal(Node root) {
         if (root != null) {
-            inorderTraversal(root.left);
-            inorderTraversal(root.right);
+            postorderTraversal(root.left);
+            postorderTraversal(root.right);
             System.out.print(root.key + " ");
         }
     }
@@ -116,6 +122,23 @@ public class Tree {
             if (curr.right != null) queue.add(curr.right);
         }
 
+    }
+
+    static int prev=-1;
+    static int pred=-1;
+    static int findPredessor(int data,Node root) {
+            if (root != null) {
+                findPredessor(data, root.left);
+                if (root.key != data) {
+                    System.out.println("Prev-"+prev);
+                    prev = root.key;
+                } else {
+                    System.out.println("Predessor-"+prev);
+                    pred=prev;
+                }
+                findPredessor(data, root.right);
+            }
+            return pred;
     }
 
 

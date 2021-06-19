@@ -36,9 +36,7 @@ class MyQueue {
     }
 
     void deque() {
-        Node temp1 = front.next;
-        front.next = null;
-        front = temp1;
+        front = front.next;
         size--;
     }
 

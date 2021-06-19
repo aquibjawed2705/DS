@@ -18,7 +18,7 @@ public class SubSet {
 
     public static void main(String[] args) {
         String s1 = "geeksforgeeks";
-        String s2 = "eks";
+        String s2 = "ekse";
         System.out.println(checkSubsetPresent(s1, s2));
     }
 }

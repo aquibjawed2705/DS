@@ -17,10 +17,48 @@ public class LinkedListOperationMain {
         //head = deleteLastNode(head);
        // head=insertAtGivenPosition(head,4,8);
         //traverseNode(head);
-        int pos=searchListData(head,30);
+       /* int pos=searchListData(head,30);
         int res=searchRecursiveListData(head,30);
         System.out.println("Position :"+pos);
-        System.out.println("Position recurision :"+res);
+        System.out.println("Position recurision :"+res);*/
+        System.out.println(isPalindrome(head));
+    }
+
+    static boolean isPalindrome(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        Node rev = revese(slow.next);
+        Node temp=head;
+        while (rev != null) {
+            if (temp.data != rev.data) {
+                return false;
+            }
+            rev=rev.next;
+            temp=temp.next;
+        }
+
+        return true;
+    }
+
+    private static Node revese(Node head) {
+        Node curr=head;
+        Node prev=null;
+        Node next=null;
+
+        while (curr!=null)
+        {
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        return prev;
     }
 
     private static Node insertAtEnd(Node head, int data) {

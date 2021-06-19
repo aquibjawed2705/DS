@@ -17,7 +17,7 @@ public class FreqInSortedArray {
     }
 
     public static void main(String[] args) {
-        int ar[] = new int[]{10, 20,30};
+        int ar[] = new int[]{10, 20,30,30,30,40};
         findFreq(ar);
     }
 }

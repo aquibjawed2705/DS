@@ -23,6 +23,6 @@ public class GenerateNumberWithDigit {
 
     public static void main(String[] args) {
         int ar[] = new int[]{1, 2, 3};
-        generateNumber(ar, 10);
+        generateNumber(ar, 15);
     }
 }
