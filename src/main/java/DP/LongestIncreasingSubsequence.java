@@ -22,6 +22,18 @@ public class LongestIncreasingSubsequence {
         return tail;
     }
 
+    private static int findIndexOfCeil(int tail[], int data, int l, int r) {
+        while (r > l) {
+            int m = l + (r - l) / 2;
+            if (tail[m]<=data) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+        return r;
+    }
+
 
     static int[] lds(int ar[]) {
         reverse(ar);
@@ -40,17 +52,7 @@ public class LongestIncreasingSubsequence {
         ar[j]=temp;
     }
 
-    private static int findIndexOfCeil(int tail[], int data, int l, int r) {
-        while (r > l) {
-            int m = l + (r - l) / 2;
-            if (tail[m]>=data) {
-                r = m;
-            } else {
-                l = m + 1;
-            }
-        }
-        return r;
-    }
+
 
     public static void main(String[] args) {
         int ar[]=new int[]{1,11,2,10,4,5,2,1};

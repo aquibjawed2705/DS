@@ -1,7 +1,5 @@
 package string.leftmostnonrepeatingcharacter;
 
-import java.util.Arrays;
-
 public class LeftMostNonRepeatingChar {
 
     static int findIndexofLeftMostRepeatingM1(String s) {

@@ -16,6 +16,9 @@ class B extends A{
 
 public class MethodHiding {
     public static void main(String[] args) {
+
+        A b=new B();
+        b.a();
         B.a();
     }
 }

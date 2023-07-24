@@ -12,7 +12,6 @@ public class SubSet {
                 i++;
             }
         }
-
         return j == s2.length();
     }
 

@@ -4,9 +4,9 @@ public class Frequency {
     static void freqOfString(String s) {
         int ar[] = new int[26];
 
-        for (int i = 0; i < ar.length; i++) {
+       /* for (int i = 0; i < ar.length; i++) {
             ar[i]=0;
-        }
+        }*/
 
         for (int i = 0; i < s.length(); i++) {
             int a=s.charAt(i)-97;
